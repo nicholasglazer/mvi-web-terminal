@@ -1,0 +1,47 @@
+{
+  "name": "uv",
+  "version": "1.0.0",
+  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholasglazer/nicholasglazer.github.io.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "mvi",
+    "react-cycle",
+    "webpack"
+  ],
+  "author": "Nicholas Glazer (http://github.com/nicholasglazer)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicholasglazer/nicholasglazer.github.io/issues"
+  },
+  "homepage": "https://github.com/nicholasglazer/nicholasglazer.github.io",
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-0": "*",
+    "eslint": "*",
+    "eslint-plugin-react": "*",
+    "react-hot-loader": "*",
+    "webpack": "2.1.0-beta.6",
+    "webpack-dev-server": "2.0.0-beta"
+  },
+  "dependencies": {
+    "cycle-react": "4.0.0",
+    "immutable": "3.8.1",
+    "prismjs": "*",
+    "react": "*",
+    "react-dom": "*",
+    "rx": "4.1.0"
+  }
+}
