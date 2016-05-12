@@ -25,7 +25,7 @@ function modifications$(intent) {
                 default: return cmd.withMutations(m => {
                     m.set('output', `bsh: command not found: ${x} `);
                     m.set('input', '');
-                })
+                });
             }
         }
         return update();
