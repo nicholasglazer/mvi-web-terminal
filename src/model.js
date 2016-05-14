@@ -1,4 +1,5 @@
 import Rx, {Observable, Concat} from 'rx';
+import commandsArr from './commandsHandler.js';
 import cycle from 'cycle-react';
 import {Map} from 'immutable';
 
@@ -15,22 +16,39 @@ function modifications$(intent) {
 
     const submitInputMod$ = intent.submitInput$.map((x) => (cmd) => {
         function update() {
-            console.log('cmd', cmd);
+            console.log('model-submitInputMod$-cmd', cmd);
+
+            // TODO: create command handler
+            // array of functions
+            // commandsArr.map(x => console.log(x));
+
+            const hist = cmd.get('output').map(item => item.getIn(['cmdList', '1']));
             switch (x) {
-                case 'hello': return cmd.withMutations(m => {
-                    m.update('cmdList', (list) => list.push(x));
-                    m.set('output', 'world');
+                case 'history': return cmd.update('output', output => output
+                    .map(item => item.set('output', hist)).toList());
+                case 'clear': return cmd.withMutations(m => {
+                    m.update('output', output => output.clear().toList());
                     m.set('input', '');
                 });
+                case 'hello': return cmd.withMutations(m => {
+                    m.update('output', output => output.push(Map({
+                        cmdList: x,
+                        cmdOutput: 'world'
+                    })));
+                    m.set('input', '');
+                });
+                case 'author': return window.open('https://github.com/nicholasglazer', '_blank');
                 default: return cmd.withMutations(m => {
-                    m.set('output', `bsh: command not found: ${x} `);
+                    m.update('output', output => output.push(Map({
+                        cmdList: x,
+                        cmdOutput: `bsh: command not found: ${x}`
+                    })));
                     m.set('input', '');
                 });
             }
         }
         return update();
     });
-
 
     return Observable.merge(
         changeInputMod$,
