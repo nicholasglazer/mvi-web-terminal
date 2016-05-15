@@ -9,7 +9,6 @@ function modifications$(intent) {
         return cmd.set('input', x);
     });
 
-
     const clearInputMod$ = intent.clearInput$.map(() => (cmd) => {
         return cmd.set('input', '');
     });
@@ -33,11 +32,12 @@ function modifications$(intent) {
                 case 'hello': return cmd.withMutations(m => {
                     m.update('output', output => output.push(Map({
                         cmdList: x,
-                        cmdOutput: 'world'
+                        cmdOutput: 'WORLD!!!'
                     })));
                     m.set('input', '');
                 });
                 case 'author': return window.open('https://github.com/nicholasglazer', '_blank');
+                case 'quit': return window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io', '_parent');
                 default: return cmd.withMutations(m => {
                     m.update('output', output => output.push(Map({
                         cmdList: x,

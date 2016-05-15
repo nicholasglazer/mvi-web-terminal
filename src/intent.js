@@ -4,8 +4,11 @@ import cycle from 'cycle-react';
 export default function intent(interactions) {
     const ESC_KEY = 27;
     const ENTER_KEY = 13;
+    const TAB_KEY
 
     return {
+        tabPressed$: interactions.get('tabPressed')
+                                 .filter(ev => ev.keyCode === TAB_KEY),
         clearInput$: interactions.get('onInputKeyUp')
                                  .filter(ev => ev.keyCode === ESC_KEY),
         changeInput$: interactions.get('onInputChange')
