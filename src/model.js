@@ -18,15 +18,17 @@ function modifications$(intent) {
             // commandsArr.map(x => console.log(x));
 
             switch (x) {
-                case 'history': return cmd.update('output', output => {
-                    console.log('history', output)
-                    output.map(item => {
-                        console.log('history2', item)
-                        item.map(x => {
-                            console.log('history3', x)
+                case 'history': return cmd.withMutations(m => {
+                    cmd.get('output').map(x => {
+                        console.log('history1',x)
+                        x.map(y => {
+                            
+                            console.log('history2',y);
                         })
                     })
+                    output.set('input', '')
                 });
+                case 'h': return showHistory();
                 case 'clear': return cmd.withMutations(m => {
                     m.update('output', output => output.clear().toList());
                     m.set('input', '');

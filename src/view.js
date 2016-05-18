@@ -51,7 +51,7 @@ const CmdItem = component('CmdItem', function (interactions, props) {
 });
 
 const CommandOutput = component('CommandOutput', function (interactions, props) {
-    const vtree$ = props.map(({output}) => {
+    const vtree$ = props.get('output').map(output => {
         return <div>
         {output.map((item, i) =>
             <CmdItem key={i} cList={item.get('cmdList')} cOutput={item.get('cmdOutput')} />
