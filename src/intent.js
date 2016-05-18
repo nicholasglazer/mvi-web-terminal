@@ -4,7 +4,7 @@ import cycle from 'cycle-react';
 export default function intent(interactions) {
     const ESC_KEY = 27;
     const ENTER_KEY = 13;
-    const TAB_KEY
+    const TAB_KEY = 14;
 
     return {
         tabPressed$: interactions.get('tabPressed')

@@ -5,13 +5,9 @@ import {Map} from 'immutable';
 
 function modifications$(intent) {
 
-    const changeInputMod$ = intent.changeInput$.map((x) => (cmd) => {
-        return cmd.set('input', x);
-    });
+    const clearInputMod$ = intent.clearInput$.map(() => (cmd) => cmd.remove('input'));
 
-    const clearInputMod$ = intent.clearInput$.map(() => (cmd) => {
-        return cmd.set('input', '');
-    });
+    const changeInputMod$ = intent.changeInput$.map((x) => (cmd) => cmd.set('input', x));
 
     const submitInputMod$ = intent.submitInput$.map((x) => (cmd) => {
         function update() {
@@ -21,7 +17,6 @@ function modifications$(intent) {
             // array of functions
             // commandsArr.map(x => console.log(x));
 
-            const hist = cmd.get('output').map(item => item.getIn(['cmdList', '1']));
             switch (x) {
                 case 'history': return cmd.update('output', output => output
                     .map(item => item.set('output', hist)).toList());
@@ -37,6 +32,7 @@ function modifications$(intent) {
                     m.set('input', '');
                 });
                 case 'author': return window.open('https://github.com/nicholasglazer', '_blank');
+                case 'q':
                 case 'quit': return window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io', '_parent');
                 default: return cmd.withMutations(m => {
                     m.update('output', output => output.push(Map({
