@@ -39,10 +39,15 @@ const CmdItem = component('CmdItem', function (interactions, props) {
         .combineLatest(cOutput$,
                        cList$,
                        function (cmd, cOutput, cList) {
-                           /* console.log('cmd cmdItem', cmd)*/
                            return <div>
                            <div className='prompt'>{`$ ${cList}`}</div>
-                           <div className="output">{cOutput}</div>
+                           <div className="output">
+                             {
+                                 Array.isArray(cOutput)
+                               ? cOutput.map(val => (<span>{val}<br/></span>))
+                               : cOutput
+                             }
+                           </div>
                            </div>
                        });
     return {
@@ -65,7 +70,7 @@ const CommandOutput = component('CommandOutput', function (interactions, props) 
 
 export default function view(cl$, interactions) {
     return cl$.map(cl =>
-         <div>
+        <div>
             {console.log("cl all: ", cl)}
         <div>
         <CommandOutput output={cl.output}/>
@@ -74,6 +79,7 @@ export default function view(cl$, interactions) {
               onInputKeyUp={interactions.listener('onInputKeyUp')}
               onInputChange={interactions.listener('onInputChange')}
               onInputSubmit={interactions.listener('onInputSubmit')}
+              onCommandClear={interactions.listener('onCommandClear')}
             />
          </div>
     );

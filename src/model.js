@@ -1,7 +1,7 @@
 import Rx, {Observable, Concat} from 'rx';
-import commandsArr from './commandsHandler.js';
 import cycle from 'cycle-react';
 import {Map} from 'immutable';
+import {history, author, quit, unexisting, reset} from './commandsHandler.js';
 
 function modifications$(intent) {
 
@@ -11,45 +11,14 @@ function modifications$(intent) {
 
     const submitInputMod$ = intent.submitInput$.map((x) => (cmd) => {
         function update() {
-            console.log('model-submitInputMod$-cmd', cmd);
-
-            // TODO: create command handler
-            // array of functions
-            // commandsArr.map(x => console.log(x));
-
             switch (x) {
-                case 'history': return cmd.withMutations(m => {
-                    cmd.get('output').map(x => {
-                        console.log('history1',x)
-                        x.map(y => {
-                            
-                            console.log('history2',y);
-                        })
-                    })
-                    output.set('input', '')
-                });
-                case 'h': return showHistory();
-                case 'clear': return cmd.withMutations(m => {
-                    m.update('output', output => output.clear().toList());
-                    m.set('input', '');
-                });
-                case 'hello': return cmd.withMutations(m => {
-                    m.update('output', output => output.push(Map({
-                        cmdList: x,
-                        cmdOutput: 'WORLD!!!'
-                    })));
-                    m.set('input', '');
-                });
-                case 'author': return window.open('https://github.com/nicholasglazer', '_blank');
+                case 'history': return history(cmd, x);
+                case 'reset': return reset(cmd);
+                case 'reset -a': return window.localStorage.removeItem('itemKey');
+                case 'author': return author();
                 case 'q':
-                case 'quit': return window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io', '_parent');
-                default: return cmd.withMutations(m => {
-                    m.update('output', output => output.push(Map({
-                        cmdList: x,
-                        cmdOutput: `bsh: command not found: ${x}`
-                    })));
-                    m.set('input', '');
-                });
+                case 'quit': return quit();
+                default: return unexisting(cmd, x);
             }
         }
         return update();
