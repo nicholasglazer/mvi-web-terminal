@@ -20,10 +20,10 @@ function modifications$(intent) {
                 case 'history': return history(cmd, x);
                 case 'reset': return reset(cmd);
                 case 'reset -a': return window.localStorage.removeItem('itemKey');
-                case 'cv': return cv();
-                case 'cv --json': return cvjson();
+                case 'cv': return cv(cmd);
+                case 'cv --json': return cvjson(cmd);
                 case 'q':
-                case 'quit': return quit();
+                case 'quit': return quit(cmd);
                 default: return unexisting(cmd, x);
             }
         }

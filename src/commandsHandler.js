@@ -23,18 +23,18 @@ export const reset = (out) => out.withMutations(m => {
 
 export const cv = (out) => {
     window.open('http://registry.jsonresume.org/nicholasglazer', '_blank');
-    out.withMutations(m => m.set('input', ''));
+    return out.withMutations(m => m.set('input', ''));
 }
 
 
 export const cvjson = (out) => {
     window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io/blob/master/src/resume.json', '_blank');
-    out.withMutations(m => m.set('input', ''));
+    return out.withMutations(m => m.set('input', ''));
 }
 
 export const quit = (out) => {
     window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io', '_parent');
-    out.withMutations(m => m.set('input', ''));
+    return out.withMutations(m => m.set('input', ''));
 }
 
 export const help = (out, inp) => out.withMutations(m => {
