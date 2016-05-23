@@ -1,7 +1,7 @@
 import Rx, {Observable, Concat} from 'rx';
 import cycle from 'cycle-react';
 import {Map} from 'immutable';
-import {history, author, quit, unexisting, reset} from './commandsHandler.js';
+import {history, author, quit, unexisting, reset, help} from './commandsHandler.js';
 
 function modifications$(intent) {
 
@@ -10,12 +10,19 @@ function modifications$(intent) {
     const changeInputMod$ = intent.changeInput$.map((x) => (cmd) => cmd.set('input', x));
 
     const submitInputMod$ = intent.submitInput$.map((x) => (cmd) => {
+        //TODO: rewrite this project with pure cyclejs
+        //TODO: add local storage driver to project, to manipulate local storage
+        //TODO: manipulate local storage to create file system
+
         function update() {
             switch (x) {
+                case 'help': return help(cmd, x);
                 case 'history': return history(cmd, x);
                 case 'reset': return reset(cmd);
                 case 'reset -a': return window.localStorage.removeItem('itemKey');
                 case 'author': return author();
+                case 'cv': return cv();
+                case 'cv --json': return cvjson();
                 case 'q':
                 case 'quit': return quit();
                 default: return unexisting(cmd, x);

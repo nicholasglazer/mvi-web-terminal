@@ -21,6 +21,7 @@ export const reset = (out) => out.withMutations(m => {
     m.set('input', '');
 });
 
+
 export const unexisting = (out, inp) => out.withMutations(m => {
     m.update('output', output => output.push(Map({
         cmdList: inp,
@@ -31,4 +32,25 @@ export const unexisting = (out, inp) => out.withMutations(m => {
 
 export const author = () => window.open('https://github.com/nicholasglazer', '_blank');
 
+export const cv = () => window.open('https://registry.jsonresume.org/nicholasglazer', '_blank');
+
+export const cvjson = () => window.open('', '_blank');
+
 export const quit = () => window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io', '_parent');
+
+export const help = (out, inp) => out.withMutations(m => {
+    m.update('output', output => output.push(Map({
+        cmdList: inp,
+        cmdOutput: {
+            [`help    - information about commands`,
+             `quit    - redirect to source code`,
+             `q       - quit alias`,
+             'reset   - reset output state (will clean terminal output)',
+             'history - show command history',
+             'author  - author github page',
+             'cv - curriculum vitae',
+             'cv --json - curriculum vitae in json format']
+        }
+    })));
+    m.set('input', '');
+});

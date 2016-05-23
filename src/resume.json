@@ -1,0 +1,165 @@
+{
+    "basics": {
+        "name": "Nicholas",
+        "label": "Web developer",
+        "picture": "",
+        "email": "glazer.nicholas@gmail.com",
+        "phone": "(058) 67-911-66",
+        "website": "http://nicholasglazer.github.io/",
+        "summary": "I'm self-tough and technologies geek. I enjoy to spectating how the world is changing and the web part in this story. I enjoy to be a part of that world. I like new stuff, but I respect older. I prefer terminal to GUI, Arch Linux to Ubuntu, Emacs to Sublime text, Dvorak to QWERTY, MVI to MVC, ES6 to subsets, webpack to gulp. I consider that ES6 and the libraries like Cycle.js, React or Angular2 is the right way to move on. Libraries like Redux and Immutableljs makes web even better with predictible states, showing us a new way to think of our apps.",
+        "location": {
+            "city": "Rishon LeZion",
+            "countryCode": "IL"
+        },
+        "profiles": [
+            {
+                "network": "Twitter",
+                "username": "nicholasglazer",
+                "url": "https://twitter.com/nicholasglazer"
+            },
+            {
+                "network": "Github",
+                "username": "nicholasglazer",
+                "url": "https://github.com/nicholasglazer"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "Eternitech",
+            "position": "Web developer/Angular Developer",
+            "website": "http://eternitech.com",
+            "startDate": "2015-10-01",
+            "endDate": "2016-06-01",
+            "summary": "Eternitech is a sowftware company specilized on web development and outsource",
+            "highlights": [
+                "Saved tons of hours for project managers, by writing a bot-parser for job offering website using PhantomJs/CasperJs, NodeJs/Express"
+            ]
+        },
+        {
+            "company": "Fifth Dimension",
+            "position": "Web Developer/React Developer",
+            "startDate": "2016-02-15",
+            "endDate": "2016-04-14",
+            "summary": "Fifth Dimension has developed specialized systems to analyze immense amounts of data in real time, using advanced artificial intelligence technology. As outsource web developer I worked there with React/Redux/Immutable stack."
+        },
+        {
+            "position": "Freelancer",
+            "startDate": "2014-03-01",
+            "endDate": "2016-04-14",
+            "summary": ""
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Pronto.ly",
+            "position": "Web Developer",
+            "website": "http://prontoly.com/",
+            "startDate": "2015-03-10",
+            "endDate": "2015-07-16",
+            "summary": "Prontoly developed proximity-based authentication technology that identifies users via their mobile device. This connection is made through the emission and detection of imperceptible sounds using the device’s microphone and speakers and doesn’t require any extra hardware or user action. Have a practice there as a part of MASA program. I worked mostly in front-end with AngularJs and developed chrome extension and website based on it. Also worked with Raspberry PI.",
+            "highlights": [
+                "Developed Raspberry PI ultrasonic receiver module for Pronto.ly software"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "John Bryce IT College",
+            "area": "Android Development",
+            "startDate": "2014-09-18",
+            "endDate": "2015-03-01"
+        },
+        {
+            "institution": "The National Metallurgical Academy of Ukraine",
+            "area": "Electrometallurgy steal and ferroalloys",
+            "studyType": "Bachelor",
+            "startDate": "2012-09-01",
+            "endDate": "2014-06-31"
+        },
+        {
+            "institution": "Dnipropetrovsk University of Economics and Law",
+            "area": "Business Management",
+            "studyType": "Master",
+            "startDate": "2008-09-01",
+            "endDate": "2014-05-01"
+        }
+    ],
+    "skills": [
+        {
+            "name": "JS Frameworks and libs",
+            "keywords": ["AngularJs", "ReactJs", "CycleJs", "Ionic", "jQuery"]
+        },
+        {
+            "name": "NodeJs",
+            "keywords": [
+                "Express", "PhantomJs", "CasperJs", "mongoose", "cheerio"
+            ]
+        },
+        {
+            "name": "Tools",
+            "keywords": [
+                "npm", "n", "yeoman", "git"
+            ]
+        },
+        {
+            "name": "Task Runners",
+            "keywords": [
+                "Webpack",
+                "Gulp",
+                "Grunt"
+            ]
+        },
+        {
+            "name": "css/html",
+            "keywords": [
+                "SASS", "jade", "bootstrap", "angular-material", "semantic-ui"
+            ]
+        },
+        {
+            "name": "CMS",
+            "keywords": [
+                "Ghost", "WP"
+            ]
+        },
+        {
+            "name": "Editors",
+            "keywords": [
+                "Vim",
+                "Emacs",
+                "ST3"
+            ]
+        },
+        {
+            "name": "Functional languages",
+            "level": "Adept",
+            "keywords": [
+                "elisp",
+                "elixir",
+                "erlang"
+            ]
+        },
+        {
+            "name": "Linux",
+            "keywords": [
+                "Ubuntu",
+                "Arch Linux"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Advanced"
+        },
+        {
+            "language": "Russian",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "Hebrew",
+            "fluency": "Beginner"
+        }
+
+    ]
+}
