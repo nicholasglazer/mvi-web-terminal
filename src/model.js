@@ -20,7 +20,6 @@ function modifications$(intent) {
                 case 'history': return history(cmd, x);
                 case 'reset': return reset(cmd);
                 case 'reset -a': return window.localStorage.removeItem('itemKey');
-                case 'author': return author();
                 case 'cv': return cv();
                 case 'cv --json': return cvjson();
                 case 'q':
