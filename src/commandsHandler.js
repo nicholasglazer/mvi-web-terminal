@@ -21,20 +21,39 @@ export const reset = (out) => out.withMutations(m => {
     m.set('input', '');
 });
 
-export const cv = (out) => {
+export const cv = (out, inp) => {
     window.open('http://registry.jsonresume.org/nicholasglazer', '_blank');
-    return out.withMutations(m => m.set('input', ''));
+    return out.withMutations(m => {
+        m.update('output', output => output.push(Map({
+            cmdList: inp,
+            cmdOutput: 'cv opened in a new window'
+        })));
+        m.set('input', '');
+    });
 }
 
 
-export const cvjson = (out) => {
+export const cvjson = (out, inp) => {
     window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io/blob/master/src/resume.json', '_blank');
-    return out.withMutations(m => m.set('input', ''));
+    return out.withMutations(m => {
+        m.update('output', output => output.push(Map({
+            cmdList: inp,
+            cmdOutput: 'cv in json format opened in a new window'
+        })));
+        m.set('input', '');
+    });
 }
 
-export const quit = (out) => {
+export const quit = (out, inp) => {
     window.open('https://github.com/NicholasGlazer/nicholasGlazer.github.io', '_parent');
-    return out.withMutations(m => m.set('input', ''));
+    return out.withMutations(m => {
+        m.update('output', output => output.push(Map({
+            cmdList: inp,
+            cmdOutput: 'bye =('
+        })));
+        m.set('input', '');
+    });
+
 }
 
 export const help = (out, inp) => out.withMutations(m => {
