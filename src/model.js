@@ -1,7 +1,7 @@
 import Rx, {Observable, Concat} from 'rx';
 import cycle from 'cycle-react';
 import {Map} from 'immutable';
-import {history, author, quit, unexisting, reset, help} from './commandsHandler.js';
+import {history, author, quit, unexisting, reset, help, cv, cvjson} from './commandsHandler.js';
 
 function modifications$(intent) {
 
