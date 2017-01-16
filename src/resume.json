@@ -6,9 +6,9 @@
         "email": "glazer.nicholas@gmail.com",
         "phone": "(058) 67-911-66",
         "website": "http://nicholasglazer.github.io/",
-        "summary": "I'm self-tough and technologies geek. I enjoy to spectating how the world is changing and the web part in this story. I enjoy to be a part of that world. I like new stuff, but I respect older. I prefer terminal to GUI, Arch Linux to Ubuntu, Emacs to Sublime text, Dvorak to QWERTY, MVI to MVC, ES6 to subsets, webpack to gulp. I consider that ES6 and the libraries like Cycle.js, React or Angular2 is the right way to move on. Libraries like Redux and Immutableljs makes web even better with predictible states, showing us a new way to think of our apps.",
+        "summary": "I'm self-tough and technology geek. I enjoy spectating how the web is changing and glad being a part of this. I like new stuff, but I respect older. I prefer a command line to GUI, Arch Linux to Ubuntu, Emacs to Vim, Dvorak to QWERTY, Redux to MVC, ES6 to subsets, gulp to grunt. I consider that ES6 and the libraries like React, Angular2, Vue and Cycle.js is the right way to move on. Libraries like Redux and Immutableljs makes the web even better with predictable states, showing us a new way to think of our applications. ",
         "location": {
-            "city": "Rishon LeZion",
+            "city": "Ramat Gan",
             "countryCode": "IL"
         },
         "profiles": [
@@ -26,6 +26,17 @@
     },
     "work": [
         {
+            "company": "Checkmarx",
+            "position": "Web developer/Angular Developer",
+            "website": "http://checkmarx.com",
+            "startDate": "2016-11-01",
+            "endDate": "2017-01-16",
+            "summary": "Checkmarx is a company providing comprehensive solutions for automated security code review. The company pioneered the concept of a query language-based solution for identifying technical and logical code vulnerabilities.",
+            "highlights": [
+                "Was part of the UI angular team, built the new system from scratch using Angularjs 1.6.1 and one way data bindings, Observable/Observer pattern using RxJs for data stream manipulations, Stylus for styles."
+            ]
+        },
+        {
             "company": "Eternitech",
             "position": "Web developer/Angular Developer",
             "website": "http://eternitech.com",
@@ -41,7 +52,7 @@
             "position": "Web Developer/React Developer",
             "startDate": "2016-02-15",
             "endDate": "2016-04-14",
-            "summary": "Fifth Dimension has developed specialized systems to analyze immense amounts of data in real time, using advanced artificial intelligence technology. As outsource web developer I worked there with React/Redux/Immutable stack."
+            "summary": "Fifth Dimension has developed specialized systems to analyze immense amounts of data in real time, using advanced artificial intelligence technology. As web developer I worked there with React/Redux/Immutable stack."
         },
         {
             "position": "Freelancer",
@@ -88,7 +99,7 @@
     "skills": [
         {
             "name": "JS Frameworks and libs",
-            "keywords": ["AngularJs", "ReactJs", "CycleJs", "Ionic", "jQuery"]
+            "keywords": ["AngularJs", "ReactJs", "VueJs", "CycleJs", "Ionic", "jQuery"]
         },
         {
             "name": "NodeJs",
@@ -113,7 +124,7 @@
         {
             "name": "css/html",
             "keywords": [
-                "SASS", "jade", "bootstrap", "angular-material", "semantic-ui"
+                "SASS", "Stylus", "jade/pug", "bootstrap", "angular-material", "semantic-ui"
             ]
         },
         {
@@ -125,8 +136,8 @@
         {
             "name": "Editors",
             "keywords": [
-                "Vim",
                 "Emacs",
+                "Vim",
                 "ST3"
             ]
         },
