@@ -6,7 +6,7 @@
         "email": "glazer.nicholas@gmail.com",
         "phone": "(058) 67-911-66",
         "website": "http://nicholasglazer.github.io/",
-        "summary": "I'm self-tough and technology geek. I enjoy spectating how the web is changing and glad being a part of this. I like new stuff, but I respect older. I prefer a command line to GUI, Arch Linux to Ubuntu, Emacs to Vim, Dvorak to QWERTY, Redux to MVC, ES6 to subsets, gulp to grunt. I consider that ES6 and the libraries like React, Angular2, Vue and Cycle.js is the right way to move on. Libraries like Redux and Immutableljs makes the web even better with predictable states, showing us a new way to think of our applications. ",
+        "summary": "I'm self-tough and technology geek. I enjoy spectating how the web is changing and glad being a part of this. I like new stuff, but I respect older. I prefer a command line to GUI, Arch Linux to Ubuntu, Emacs to Vim, Dvorak to QWERTY, Redux to MVC, ES6 to subsets, gulp to grunt. I consider that ES6 and the libraries like React, Angular2, Vue and Cycle.js is the right way to move on. Libraries like Redux and Immutableljs makes the web even better with predictable states,makes it easy to debug and showing us a new way to think of our applications.",
         "location": {
             "city": "Ramat Gan",
             "countryCode": "IL"
@@ -44,7 +44,8 @@
             "endDate": "2016-06-01",
             "summary": "Eternitech is a sowftware company specilized on web development and outsource",
             "highlights": [
-                "Saved tons of hours for project managers, by writing a bot-parser for job offering website using PhantomJs/CasperJs, NodeJs/Express"
+                "Did mobile and web applications from scratch using Angularjs, Ionic, Nodejs et.c."
+                "Saved tons of hours for project managers, by writing a bot-parser for the job offering website using PhantomJs/CasperJs, NodeJs/Express"
             ]
         },
         {
